@@ -24,7 +24,7 @@ def encrypt_all_keys_in_prefix(bucket, prefix, encrypt_out, strip_string, use_py
         for key in keys:
             utils.encrypt_s3_copy_key(key, bucket, encrypt_out, strip_string)
 
-
+#imagenet2candidates_mturk --strip_string ".jpg" --pywren
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
