@@ -24,11 +24,14 @@ MAX_TRIES = 5
 
 logger = logging.getLogger(__name__)
 
+#This function convert unix_timestamp to normal time
 def get_readable_time(unix_timestamp):
     return datetime.datetime.fromtimestamp(
         unix_timestamp
     ).strftime('%Y-%m-%d %H:%M:%S')
 
+#Get the image from the url of the image and save into the directory
+#TODO: WHAT IS CID
 def get_image(url, cid, image_save_dir):
     try:
         pathlib.Path(image_save_dir).mkdir(parents=True, exist_ok=True) 
@@ -39,6 +42,7 @@ def get_image(url, cid, image_save_dir):
     except Exception as e:
         print(e)
     return
+
 
 def flickr_search_synset(imgnt, wnids, api_key, api_secret, args):
     if args.use_additional_search_terms:
