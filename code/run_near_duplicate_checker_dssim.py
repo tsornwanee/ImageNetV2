@@ -2,6 +2,7 @@ from near_duplicate_checker import main
 from collections import namedtuple
 from timeit import default_timer as timer
 
+#Args isa datatype
 Args = namedtuple('Args', ['top_k',
                            'input_filename',
                            'output_filename',
@@ -16,6 +17,7 @@ Args = namedtuple('Args', ['top_k',
                            'no_cache',
                            'cache_root'])
 
+#Define args
 args = Args(top_k=100,
             input_filename='../data/metadata/nearest_neighbor_results.pickle',
             output_filename='../data/metadata/nearest_neighbor_results.pickle',
